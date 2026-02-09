@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+
+   <header>
+    <h1>🛒 SmartList</h1>
+
+    <div class="header-acoes">
+        
+        <a href="historico.html" class="btn-historico">📜 Histórico</a>
+       
+    </div>
+</header>
+
+
+<main>
+
+    <!-- FORMULÁRIO -->
+    <section class="add-item">
+        <input type="text" id="itemNome" placeholder="Item">
+        <input type="number" id="itemQtd" placeholder="Qtd" min="1">
+        <input type="number" id="itemPreco" placeholder="Preço (unid.)" step="0.01" min="0">
+
+       <select id="itemCategoria">
+    <!-- Alimentos -->
+    <option>Padaria</option>
+    <option>Açougue</option>
+    <option>Peixaria</option>
+    <option>Hortifruti</option>
+    <option>Mercearia</option>
+    <option>Frios e Laticínios</option>
+    <option>Congelados</option>
+    <option>Doces e Sobremesas</option>
+
+    <!-- Bebidas -->
+    <option>Bebidas</option>
+    <option>Adega</option>
+
+    <!-- Limpeza e Casa -->
+    <option>Limpeza</option>
+    <option>Higiene Pessoal</option>
+    <option>Lavanderia</option>
+    <option>Descartáveis</option>
+    <option>Utilidades Domésticas</option>
+
+    <!-- Saúde e Outros -->
+    <option>Farmácia</option>
+    <option>Pet Shop</option>
+    <option>Infantil</option>
+    <option>Bazar</option>
+    <option>Outros</option>
+</select>
+
+        <button id="btnAdd">Adicionar</button>
+    </section>
+
+    <!-- LISTA -->
+    <section class="list" id="listaItens"></section>
+
+</main>
+
+<!-- RODAPÉ -->
+<section class="total total-fixo-mobile">
+    <span id="qtdTotal">0 itens</span>
+    <strong>R$ <span id="totalGeral">0.00</span></strong>
+    <button id="btnFinalizar">Finalizar</button>
+</section>
+
+<script src="js/app.js"></script>
+<!-- MODAL FINALIZAR COMPRA -->
+<div class="modal-overlay" id="modalFinalizar">
+    <div class="modal-box">
+        <h3>🛒 Finalizar compra?</h3>
+        <p>Deseja salvar esta compra no histórico?</p>
+
+        <div class="modal-actions">
+            <button class="btn-cancelar" id="btnCancelarFinalizar">
+                Cancelar
+            </button>
+            <button class="btn-confirmar" id="btnConfirmarFinalizar">
+                Confirmar
+            </button>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

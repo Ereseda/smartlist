@@ -1,0 +1,308 @@
+/* =========================
+   VARIÁVEIS DE TEMA
+========================= */
+:root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --text: #222;
+    --primary: #2e7d32;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    padding-bottom: 110px; /* espaço para rodapé fixo */
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* =========================
+   HEADER PRINCIPAL
+========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+/* =========================
+   HEADER HISTÓRICO
+========================= */
+.header-historico {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background: #f0f0f0;
+}
+
+/* =========================
+   BOTÃO HISTÓRICO (HOME)
+========================= */
+.header-acoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-historico {
+    text-decoration: none;
+    background: var(--primary);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-historico:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+.add-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.add-item input,
+.add-item select,
+.add-item button {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* =========================
+   LISTA
+========================= */
+.list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================
+   CATEGORIA (LISTA ATUAL)
+========================= */
+.categoria-titulo {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 22px 0 8px;
+    padding: 6px 10px;
+    background: rgba(46, 125, 50, 0.08);
+    border-left: 4px solid var(--primary);
+    border-radius: 6px;
+}
+
+/* =========================
+   ITEM (CARD)
+========================= */
+.list li {
+    background: var(--card);
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.list li span {
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+/* Item comprado */
+.list li.comprado {
+    background: #f1f8f4;
+    opacity: 0.75;
+}
+
+.list li.comprado span {
+    text-decoration: line-through;
+}
+
+/* =========================
+   AÇÕES
+========================= */
+.acoes {
+    display: flex;
+    gap: 6px;
+}
+
+.acoes button {
+    background: #f4f6f8;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 4px 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* =========================
+   TOTAL DA CATEGORIA
+========================= */
+.totalCategoria {
+    margin: 6px 0 18px;
+    padding: 6px 10px;
+    background: rgba(0,0,0,0.04);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* =========================
+   RODAPÉ FIXO
+========================= */
+.total-fixo-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: var(--primary);
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: bold;
+
+    z-index: 1000;
+}
+
+.total-fixo-mobile button {
+    background: #fff;
+    color: var(--primary);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-box {
+    background: var(--card);
+    padding: 22px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-confirmar {
+    flex: 1;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    flex: 1;
+    background: #eee;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* =========================
+   HISTÓRICO DE COMPRAS
+========================= */
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .add-item {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .add-item input,
+    .add-item select,
+    .add-item button {
+        padding: 9px;
+    }
+
+    .categoria-titulo {
+        font-size: 15px;
+    }
+
+    .list li {
+        padding: 10px 12px;
+    }
+
+    .totalCategoria {
+        font-size: 13px;
+    }
+}

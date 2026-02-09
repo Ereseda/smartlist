@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Histórico de Compras - SmartList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS GLOBAL -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS ESPECÍFICO DO HISTÓRICO -->
+    <link rel="stylesheet" href="css/historico.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header-historico">
+    <button class="btn-voltar" onclick="location.href='index.html'">
+        ⬅ Voltar
+    </button>
+    <h1>📜 Histórico de Compras</h1>
+</header>
+
+<!-- CONTEÚDO -->
+<main>
+    <section id="listaHistorico"></section>
+</main>
+
+<!-- MODAL EXCLUIR COMPRA -->
+<div class="modal-overlay" id="modalExcluir">
+    <div class="modal-box">
+        <h3>🗑 Excluir compra</h3>
+        <p>Deseja excluir esta compra do histórico?</p>
+
+        <div class="modal-actions">
+            <button class="btn-cancelar" id="btnCancelarExcluir">
+                Cancelar
+            </button>
+            <button class="btn-confirmar" id="btnConfirmarExcluir">
+                Excluir
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="js/historico.js"></script>
+
+</body>
+</html>
